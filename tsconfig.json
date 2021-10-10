@@ -6,13 +6,15 @@
     "emitDecoratorMetadata": true,
     "module": "esnext",
     "rootDir": "src",
+    "declaration": true,
     "sourceMap": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipDefaultLibCheck": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["@emotion/react/types/css-prop"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"],
