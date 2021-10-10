@@ -14,7 +14,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint . && prettier . --check",
     "lint:fix": "eslint . --fix && prettier . --write",
-    "prepare": "simple-git-hooks",
+    "prepare": "simple-git-hooks && yarn build",
     "build": "rimraf cjs esm && rollup -c"
   },
   "repository": {
