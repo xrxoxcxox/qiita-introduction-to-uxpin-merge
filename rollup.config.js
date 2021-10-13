@@ -20,7 +20,7 @@ export default [
       resolve(),
       peerDepsExternal(),
       commonjs(),
-      typescript({ declarationDir: 'cjs', exclude: ['src/**/*.stories.tsx'] })
+      typescript({ declaration: true, declarationDir: 'cjs', exclude: ['src/**/*.stories.tsx'] })
     ]
   },
   {
@@ -39,7 +39,7 @@ export default [
       resolve(),
       peerDepsExternal(),
       commonjs(),
-      typescript({ declarationDir: 'esm', exclude: ['src/**/*.stories.tsx'] })
+      typescript({ declaration: true, declarationDir: 'esm', exclude: ['src/**/*.stories.tsx'] })
     ]
   }
 ]

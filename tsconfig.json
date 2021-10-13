@@ -6,7 +6,6 @@
     "emitDecoratorMetadata": true,
     "module": "esnext",
     "rootDir": "src",
-    "declaration": true,
     "sourceMap": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
