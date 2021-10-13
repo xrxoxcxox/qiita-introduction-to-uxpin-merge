@@ -106,3 +106,6 @@ dist
 # Rollup build output
 cjs
 esm
+
+# UXPin build output
+/.uxpin-merge
