@@ -1,10 +1,7 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import commonjs from 'rollup-plugin-commonjs'
-import builtins from 'rollup-plugin-node-builtins'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
-import babel from 'rollup-plugin-babel'
-import { DEFAULT_EXTENSIONS } from '@babel/core'
 
 export default [
   {
@@ -20,14 +17,10 @@ export default [
       }
     ],
     plugins: [
+      resolve(),
       peerDepsExternal(),
       commonjs(),
-      builtins(),
-      resolve(),
-      typescript({ declarationDir: 'cjs', exclude: ['src/**/*.stories.tsx'] }),
-      babel({
-        extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx']
-      })
+      typescript({ declarationDir: 'cjs', exclude: ['src/**/*.stories.tsx'] })
     ]
   },
   {
@@ -43,14 +36,10 @@ export default [
       }
     ],
     plugins: [
+      resolve(),
       peerDepsExternal(),
       commonjs(),
-      builtins(),
-      resolve(),
-      typescript({ declarationDir: 'esm', exclude: ['src/**/*.stories.tsx'] }),
-      babel({
-        extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx']
-      })
+      typescript({ declarationDir: 'esm', exclude: ['src/**/*.stories.tsx'] })
     ]
   }
 ]
