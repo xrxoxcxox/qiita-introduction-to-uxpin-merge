@@ -3,3 +3,4 @@ cjs
 esm
 uxpin.config.js
 uxpin.webpack.config.js
+.uxpin-merge
