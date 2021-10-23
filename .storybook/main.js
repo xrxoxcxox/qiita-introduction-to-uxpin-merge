@@ -3,6 +3,6 @@ module.exports = {
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   babel: async (options) => ({
     ...options,
-    presets: [...options.presets, "@emotion/babel-preset-css-prop"]
+    presets: [...options.presets, '@emotion/babel-preset-css-prop']
   })
 }
