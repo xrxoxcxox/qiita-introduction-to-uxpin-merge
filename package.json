@@ -67,6 +67,6 @@
     "pre-commit": "yarn run lint-staged"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "yarn run lint:fix"
+    "*": "yarn run lint:fix"
   }
 }
