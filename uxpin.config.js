@@ -3,12 +3,10 @@ module.exports = {
     categories: [
       {
         name: 'General',
-        include: [
-          'src/components/Button/Button.tsx',
-        ]
+        include: ['src/components/Button/Button.tsx']
       }
     ],
-    webpackConfig: 'uxpin.webpack.config.js',
+    webpackConfig: 'uxpin.webpack.config.js'
   },
   name: 'introduction to UXPin Merge'
-};
+}

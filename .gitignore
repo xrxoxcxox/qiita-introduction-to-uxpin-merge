@@ -107,5 +107,8 @@ dist
 cjs
 esm
 
+# Storybook build output
+storybook-static
+
 # UXPin build output
-/.uxpin-merge
+.uxpin-merge

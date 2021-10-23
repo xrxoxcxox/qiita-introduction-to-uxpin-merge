@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2021",
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "module": "esnext",
