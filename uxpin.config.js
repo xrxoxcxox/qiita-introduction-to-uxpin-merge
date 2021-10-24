@@ -10,6 +10,10 @@ module.exports = {
           'src/components/Textfield/Textfield.tsx',
           'src/components/Typography/Typography.tsx'
         ]
+      },
+      {
+        name: 'Layout',
+        include: ['src/components/Stack/Stack.tsx']
       }
     ],
     webpackConfig: 'uxpin.webpack.config.js'
