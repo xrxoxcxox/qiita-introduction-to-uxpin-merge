@@ -31,6 +31,7 @@
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.2.5",
     "@storybook/addon-actions": "^6.3.10",
@@ -60,6 +61,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
