@@ -3,7 +3,11 @@ module.exports = {
     categories: [
       {
         name: 'General',
-        include: ['src/components/Button/Button.tsx', 'src/components/Textfield/Textfield.tsx']
+        include: [
+          'src/components/Button/Button.tsx',
+          'src/components/Textfield/Textfield.tsx',
+          'src/components/Typography/Typography.tsx'
+        ]
       }
     ],
     webpackConfig: 'uxpin.webpack.config.js'
