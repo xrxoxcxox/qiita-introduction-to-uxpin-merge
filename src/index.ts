@@ -1,1 +1,3 @@
-export { Button } from './components/Button/Button'
+export { color, typography } from './styles/tokens'
+
+export { Button } from './components/Button'

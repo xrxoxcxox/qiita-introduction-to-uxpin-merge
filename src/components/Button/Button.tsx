@@ -1,77 +1,57 @@
+import { ReactNode } from 'react'
 import { css } from '@emotion/react'
+import { color, typography } from '../../styles/tokens'
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string
-  /**
-   * How large should the button be?
-   */
+interface Props {
+  children: ReactNode
+  variant?: 'primary' | 'secondary'
   size?: 'small' | 'medium' | 'large'
-  /**
-   * Button contents
-   */
-  label: string
-  /**
-   * Optional click handler
-   */
   className?: string
   onClick?: () => void
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
-  primary = false,
+  children = 'button text',
+  variant = 'primary',
   size = 'medium',
-  backgroundColor,
-  label,
   className,
-  ...props
-}: ButtonProps): JSX.Element => {
-  const mode = primary ? styles.primary : styles.secondary
+  onClick
+}: Props): JSX.Element => {
   return (
-    <button type="button" css={[styles.button, styles[size], mode, className]} style={{ backgroundColor }} {...props}>
-      {label}
+    <button type="button" css={[styles.button, styles[variant], styles[size]]} className={className} onClick={onClick}>
+      {children}
     </button>
   )
 }
 
 const styles = {
   button: css`
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    border: 0;
-    border-radius: 3em;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
-    line-height: 1;
+    font-weight: 600;
+    padding: 8px 16px;
   `,
   primary: css`
-    color: white;
-    background-color: #1ea7fd;
+    background-color: ${color.green[60]};
+    border-color: transparent;
+    color: ${color.text.primary};
   `,
   secondary: css`
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    background-color: ${color.gray[0]};
+    border-color: ${color.green[60]};
+    color: ${color.text.secondary};
   `,
   small: css`
-    font-size: 12px;
-    padding: 10px 16px;
+    font-size: ${typography.body2};
   `,
   medium: css`
-    font-size: 14px;
-    padding: 11px 20px;
+    font-size: ${typography.body1};
   `,
   large: css`
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size: ${typography.subhead1};
   `
 }
