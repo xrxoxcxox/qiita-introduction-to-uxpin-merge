@@ -9,7 +9,7 @@
     "esm"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "uxpin": "uxpin-merge –disable-tunneling",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint . && prettier . --check",
